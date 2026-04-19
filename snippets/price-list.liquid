@@ -14,6 +14,7 @@ Supported variables
 * line_item: if provided, then the price from this line item are rendered (used on cart or order)
 * hide_unit_price: if set to true unit prices are hidden (mostly useful for size constrained elements)
 * context: can be "product", "line_item" or "card". This controls how the prices are displayed (using the correct sizes)
+* collection_discount: optional whole-number percent off (e.g. 15) when rendering from a discounted collection; takes priority over compare-at pricing on cards
 {%- endcomment -%}
 
 {%- liquid
@@ -36,6 +37,8 @@ Supported variables
       assign compare_at_price_classes = base_text_class | append: 'h5 text-subdued line-through'
       assign unit_price_classes = base_text_class | append: 'h6 text-subdued'
   endcase
+
+  assign collection_discount_percentage = collection_discount | divided_by: 100.0
 -%}
 
 <price-list class="price-list {% if context == 'product' %}price-list--product{% endif %}">
@@ -113,9 +116,45 @@ Supported variables
         assign variant_price = variant.price | money
         assign variant_compare_at_price = variant.compare_at_price | money
       endif
+
+      assign show_collection_discount = false
+      if collection_discount != blank and collection_discount > 0
+        assign show_collection_discount = true
+        assign collection_discount_amount = variant.price | times: collection_discount_percentage
+        assign discounted_price_cents = variant.price | minus: collection_discount_amount | round
+        if settings.currency_code_enabled
+          assign discounted_price_formatted = discounted_price_cents | money_with_currency
+        else
+          assign discounted_price_formatted = discounted_price_cents | money
+        endif
+      endif
     -%}
 
-    {%- if product.price_varies -%}
+    {%- if show_collection_discount -%}
+      {%- if product.price_varies -%}
+        {%- if settings.product_price_strategy == 'from_price' -%}
+          <sale-price class="{{ on_sale_price_classes }}">
+            <span class="sr-only">{{ 'product.price.sale_price' | t }}</span>
+            {{- 'product.price.from_price_html' | t: price_min: discounted_price_formatted -}}
+          </sale-price>
+        {%- else -%}
+          <sale-price class="{{ on_sale_price_classes }}">
+            <span class="sr-only">{{ 'product.price.sale_price' | t }}</span>
+            {{- discounted_price_formatted -}}
+          </sale-price>
+        {%- endif -%}
+      {%- else -%}
+        <sale-price class="{{ on_sale_price_classes }}">
+          <span class="sr-only">{{ 'product.price.sale_price' | t }}</span>
+          {{- discounted_price_formatted -}}
+        </sale-price>
+      {%- endif -%}
+
+      <compare-at-price class="{{ compare_at_price_classes }}">
+        <span class="sr-only">{{ 'product.price.regular_price' | t }}</span>
+        {{- variant_price -}}
+      </compare-at-price>
+    {%- elsif product.price_varies -%}
       {%- assign is_variant_on_sale = false -%}
 
       {%- if variant.price < variant.compare_at_price -%}
@@ -128,7 +167,7 @@ Supported variables
           {{- 'product.price.from_price_html' | t: price_min: variant_price -}}
         </sale-price>
       {%- else -%}
-        <sale-price class="{{ on_sale_price_classes }}">  
+        <sale-price class="{{ on_sale_price_classes }}">
           <span class="sr-only">{{ 'product.price.sale_price' | t }}</span>
           {{- variant_price -}}
         </sale-price>
@@ -140,7 +179,7 @@ Supported variables
       </sale-price>
     {%- endif -%}
 
-    {%- if variant.price < variant.compare_at_price -%}
+    {%- if show_collection_discount == false and variant.price < variant.compare_at_price -%}
       <compare-at-price class="{{ compare_at_price_classes }}">
         <span class="sr-only">{{ 'product.price.regular_price' | t }}</span>
         {{- variant_compare_at_price -}}

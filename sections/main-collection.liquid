@@ -36,6 +36,8 @@
       assign products_mobile_grid_mode = 'medium'
     endif
   endif
+
+  assign collection_discount = collection.metafields.collection_data.collection_discount.value
 -%}
 
 {%- comment -%}
@@ -224,7 +226,7 @@ LIQUID
 
                 <product-list id="product-list-{{ section.id }}" class="product-list" collection-mobile-layout="{{ products_mobile_grid_mode }}" collection-desktop-layout="{{ products_desktop_grid_mode }}">
                   {%- for product in collection.products -%}
-                    {%- render 'product-card', product: product, reveal: settings.stagger_products_apparition, position: forloop.index, hide_product_information: section.settings.hide_product_information, stacked: true -%}
+                    {%- render 'product-card', product: product, reveal: settings.stagger_products_apparition, position: forloop.index, hide_product_information: section.settings.hide_product_information, stacked: true, collection_discount: collection_discount -%}
                   {%- endfor -%}
                 </product-list>
 

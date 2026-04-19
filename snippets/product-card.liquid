@@ -146,7 +146,7 @@ Supported variables
             {%- endif -%}
 
             {%- if show_prices -%}
-              {%- render 'price-list', product: product, context: 'card' -%}
+              {%- render 'price-list', product: product, context: 'card', collection_discount: collection_discount -%}
             {%- endif -%}
           </div>
         {%- endif -%}
