@@ -1,0 +1,123 @@
+.designer-list {
+  --designer-list-gap: 1rem;
+}
+
+.designer-list__alphabet {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--designer-list-gap);
+  margin-block-end: 2rem;
+}
+
+.designer-list__all-button {
+  position: relative;
+  margin-inline-end: 1rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .designer-list__all-button::after {
+    content: "";
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-end: -1rem;
+    width: 1px;
+    height: 50%;
+    background: rgb(var(--border-color));
+    transform: translateY(-50%);
+  }
+}
+
+.designer-list__letter-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--designer-list-gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.designer-list__letter {
+  padding: 0.25rem 0.5rem;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+
+.designer-list__letter:hover,
+.designer-list__letter.is-active {
+  background: rgb(var(--text-color));
+  color: rgb(var(--background));
+}
+
+.designer-list__collections {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  columns: 1;
+  column-gap: 3rem;
+}
+
+.designer-list__letter-group {
+  break-inside: avoid;
+  margin-bottom: 2rem;
+  page-break-inside: avoid;
+}
+
+.designer-list__letter-items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Remove columns when empty */
+.designer-list__collections--empty {
+  columns: unset !important;
+}
+
+/* More specific selector to override theme styles */
+.designer-list .designer-list__letter-heading {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0 0 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(var(--text-color), 0.1);
+}
+
+.designer-list__collection-link {
+  display: block;
+  padding: 0.5rem 0;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.designer-list__collection-link:hover {
+  opacity: 0.6;
+}
+
+.designer-list__no-results {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 20vh;
+  font-size: 1.2rem;
+  padding: 4rem 0;
+}
+
+@media screen and (min-width: 700px) {
+  .designer-list__collections {
+    columns: 3;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .designer-list__collections {
+    columns: 4;
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  .designer-list__collections {
+    columns: 5;
+  }
+} 

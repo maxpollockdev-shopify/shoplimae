@@ -1,0 +1,103 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "Footer group",
+  "sections": {
+    "1743932926a4cd1234": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_YmqpJj": {
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "",
+            "title_color": "",
+            "alignment": "center",
+            "show_instagram_link": true,
+            "link_alignment": "center",
+            "link_color": "#000000",
+            "background_color": "",
+            "feed_id": "",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_YmqpJj"
+      ],
+      "settings": {
+        "color_scheme": "scheme-2",
+        "separate_section_with_border": false,
+        "remove_vertical_spacing": true,
+        "remove_horizontal_spacing": false
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "image_a4ftNc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/secondary_logo_cream.png",
+            "image_width": 150,
+            "link": ""
+          }
+        },
+        "links": {
+          "type": "links",
+          "settings": {
+            "menu": "main-menu",
+            "show_menu_title": true,
+            "menu_title": ""
+          }
+        },
+        "links_YK3DeP": {
+          "type": "links",
+          "settings": {
+            "menu": "footer",
+            "show_menu_title": true,
+            "menu_title": "OUR POLICIES"
+          }
+        },
+        "text_PzP9Yy": {
+          "type": "text",
+          "settings": {
+            "title": "Limae",
+            "content": "<p>Curating Style - Inspiring Play</p>",
+            "enable_follow_on_shop": true
+          }
+        }
+      },
+      "block_order": [
+        "image_a4ftNc",
+        "links",
+        "links_YK3DeP",
+        "text_PzP9Yy"
+      ],
+      "custom_css": [
+        ".footer__block--links a {font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase;}"
+      ],
+      "settings": {
+        "color_scheme": "scheme-c4361b66-f3cc-430f-9d10-7bf26b99f532",
+        "separate_section_with_border": true,
+        "show_social_media": false,
+        "show_payment_icons": true,
+        "show_country_selector": true,
+        "show_country_name": true,
+        "show_country_flag": true,
+        "show_locale_selector": true
+      }
+    }
+  },
+  "order": [
+    "1743932926a4cd1234",
+    "footer"
+  ]
+}

@@ -1,0 +1,47 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "question-1": {
+          "type": "question",
+          "settings": {
+            "question": "How can I contact you?",
+            "answer": "<p>You can reach us via email at <a href=\"mailto:hello@limae.com\" title=\"mailto:hello@limae.com\">hello@limae.com</a> or by sending a direct message on our Instagram page or contact us at our phone number <a href=\"tel:+96599444976\" title=\"tel:+96599444976\">+965 99444976</a>.<br/><br/><br/>We look forward to assisting you!</p>"
+          }
+        },
+        "question-2": {
+          "type": "question",
+          "settings": {
+            "question": "Do you offer refunds?",
+            "answer": "<p>Yes, we offer refunds if the product is returned within 14 days of purchase.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question-1",
+        "question-2"
+      ],
+      "settings": {
+        "color_scheme": "scheme-2",
+        "separate_section_with_border": false,
+        "show_categories": false,
+        "subheading": "Need help?",
+        "title": "Frequently Asked Questions",
+        "content": ""
+      }
+    }
+  },
+  "order": [
+    "faq"
+  ]
+}

@@ -1,0 +1,165 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "vendor",
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h1"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_taxes_notice": false
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": false,
+            "selector_style": "block",
+            "swatch_selector_style": "swatch",
+            "variant_image_options": "",
+            "size_chart_page": ""
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "separator_WEjaMP": {
+          "type": "separator",
+          "settings": {}
+        },
+        "gift_option_GdPH7E": {
+          "type": "gift_option",
+          "settings": {
+            "heading": "Is this a gift?",
+            "description": "<p>Let us know if this is a gift and we'll help make it special!</p>"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": true,
+            "show_gift_card_recipient": true,
+            "atc_button_background": "#739380",
+            "atc_button_text_color": "",
+            "payment_button_background": "#a0b1c6",
+            "payment_button_text_color": ""
+          }
+        },
+        "accordion_efeenj": {
+          "type": "accordion",
+          "settings": {
+            "show_below_gallery": false,
+            "icon": "none",
+            "title": "Description",
+            "content": "{{ product.description }}",
+            "liquid": "",
+            "page": ""
+          }
+        },
+        "accordion_qQVBrK": {
+          "type": "accordion",
+          "settings": {
+            "show_below_gallery": false,
+            "icon": "none",
+            "title": "Delivery & Returns",
+            "content": "<ul><li>Orders placed before 4 PM will be delivered on the same day, while orders placed after 4 PM will be delivered the next day.</li><li>Orders placed on Thursday after 4 pm will be delivered on Saturday.</li><li>14-day return period.</li></ul>",
+            "liquid": "",
+            "page": ""
+          }
+        },
+        "share_buttons_TffLd9": {
+          "type": "share_buttons",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "separator_WEjaMP",
+        "gift_option_GdPH7E",
+        "buy_buttons",
+        "accordion_efeenj",
+        "accordion_qQVBrK",
+        "share_buttons_TffLd9"
+      ],
+      "custom_css": [
+        "#trust-bar {display: none;}"
+      ],
+      "settings": {
+        "color_scheme": "scheme-2",
+        "container_size": "xl",
+        "product_info_size": 35,
+        "show_sticky_add_to_cart": false,
+        "center_basic_info": false,
+        "desktop_media_layout": "grid",
+        "desktop_media_grid_gap": 30,
+        "mobile_controls": "dots",
+        "enable_media_autoplay": false,
+        "enable_video_looping": true,
+        "enable_image_zoom": true,
+        "max_image_zoom_level": 3
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "separate_section_with_border": true,
+        "hide_product_information": false,
+        "stack_products": false,
+        "recommendations_count": 10,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 6,
+        "horizontal_spacing_factor": 0.2,
+        "vertical_spacing_factor": 1,
+        "subheading": "Why not check these out?",
+        "title": "You may also like",
+        "content": ""
+      }
+    },
+    "recently_viewed_products_AQXAY7": {
+      "type": "recently-viewed-products",
+      "settings": {
+        "separate_section_with_border": true,
+        "color_scheme": "scheme-2",
+        "hide_product_information": false,
+        "stack_products": false,
+        "products_count": 9,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 6,
+        "horizontal_spacing_factor": 0.2,
+        "vertical_spacing_factor": 1,
+        "subheading": "Don't miss these!",
+        "title": "Recently viewed",
+        "content": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "related-products",
+    "recently_viewed_products_AQXAY7"
+  ]
+}

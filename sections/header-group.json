@@ -1,0 +1,111 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "Header group",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "message-1": {
+          "type": "message",
+          "settings": {
+            "text": "Shop our <a href=\"/collections/sale-1\" title=\"SALE\">sale</a>"
+          }
+        },
+        "message_iGFapG": {
+          "type": "message",
+          "settings": {
+            "text": "Check out <a href=\"/collections/whats-new\" title=\"WHATS NEW\">whats new</a>"
+          }
+        }
+      },
+      "block_order": [
+        "message-1",
+        "message_iGFapG"
+      ],
+      "settings": {
+        "color_scheme": "scheme-fbf4983d-ceb5-4af2-a094-db11f039beeb",
+        "enable_sticky": false,
+        "autoplay": true,
+        "cycle_speed": 5,
+        "desktop_font_size": 11,
+        "mobile_font_size": 10
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "mega_menu_YNP49M": {
+          "type": "mega_menu",
+          "settings": {
+            "menu_item": "Boys",
+            "images_position": "right",
+            "image_1": "shopify://shop_images/688A5F59-5ABC-4BE2-9C26-835FC4D6C354.png",
+            "image_1_heading": "",
+            "image_1_text": "",
+            "image_1_link": "",
+            "image_2_heading": "",
+            "image_2_text": "",
+            "image_2_link": ""
+          }
+        },
+        "mega_menu_LC7ibE": {
+          "type": "mega_menu",
+          "settings": {
+            "menu_item": "Girls",
+            "images_position": "right",
+            "image_1": "shopify://shop_images/E3538FDF-4E07-46C3-BAC7-732449826675.png",
+            "image_1_heading": "",
+            "image_1_text": "",
+            "image_1_link": "",
+            "image_2_heading": "",
+            "image_2_text": "",
+            "image_2_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "mega_menu_YNP49M",
+        "mega_menu_LC7ibE"
+      ],
+      "settings": {
+        "color_scheme": "scheme-2",
+        "enable_sticky": true,
+        "hide_on_scroll": true,
+        "show_separation_border": true,
+        "reduce_padding": true,
+        "logo": "{{ shop.brand.logo }}",
+        "logo_max_width": 140,
+        "logo_mobile_max_width": 100,
+        "menu": "main-menu",
+        "sidebar_menu": "",
+        "menu_open_trigger": "hover",
+        "menu_text_font": "heading",
+        "enable_search": true,
+        "sidebar_color_scheme": "scheme-2",
+        "sidebar_text_font": "heading",
+        "sidebar_show_dividers": true,
+        "sidebar_open_second_level_menus": false,
+        "layout": "logo_left_navigation_center",
+        "show_icons": true,
+        "show_country_selector": false,
+        "show_country_name": false,
+        "show_country_flag": false,
+        "show_locale_selector": false,
+        "transparent_header_text_color": "#ffffff"
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}
